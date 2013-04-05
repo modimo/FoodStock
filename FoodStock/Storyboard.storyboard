@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OwG-Dz-nm2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller - FoodStock-->
+        <scene sceneID="DW5-Hd-Jbh">
+            <objects>
+                <tableViewController id="EOP-GQ-tJc" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Re7-Uu-lxc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Überlick" footerTitle="Damit alles schön frisch bleibt." id="tKR-8E-sv3">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="WHY-TJ-YGY" style="IBUITableViewCellStyleDefault" id="Ken-p7-WBP">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Produkt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHY-TJ-YGY">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="1rm-Sn-Pjv" kind="push" id="QDn-RA-BJa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="E92-IB-03z" style="IBUITableViewCellStyleDefault" id="Ywh-cU-Yic">
+                                        <rect key="frame" x="0.0" y="91" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Vorrat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E92-IB-03z">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="tuB-Rr-7oG" style="IBUITableViewCellStyleDefault" id="1H1-7g-7pu">
+                                        <rect key="frame" x="0.0" y="135" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Einkaufsliste" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuB-Rr-7oG">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="EOP-GQ-tJc" id="5Ta-Ip-dJO"/>
+                            <outlet property="delegate" destination="EOP-GQ-tJc" id="ADf-vx-wgs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="FoodStock" id="oGC-Il-EsC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="krg-kb-dzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="56"/>
+        </scene>
+        <!--Product View Controller - Produkt-->
+        <scene sceneID="NGc-oD-Y9A">
+            <objects>
+                <tableViewController id="1rm-Sn-Pjv" customClass="ProductViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6lf-gd-sk6">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="FM3-JQ-enq" style="IBUITableViewCellStyleDefault" id="qWV-K7-1fa">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FM3-JQ-enq">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1rm-Sn-Pjv" id="3c5-KG-Jay"/>
+                            <outlet property="delegate" destination="1rm-Sn-Pjv" id="Yfq-gq-Q5J"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Produkt" id="wAN-2I-JgI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CSi-hV-8Wg">
+                            <connections>
+                                <segue destination="ObL-Uk-yyO" kind="modal" id="Kym-oG-yvg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aV5-YJ-t63" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1398" y="58"/>
+        </scene>
+        <!--Product Add View Controller-->
+        <scene sceneID="Bra-L6-yta">
+            <objects>
+                <viewController id="ObL-Uk-yyO" customClass="ProductAddViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sib-of-vY2">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-np-vVn">
+                                <items>
+                                    <navigationItem title="Add" id="FsI-wF-3zx">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="cxK-yd-o5D">
+                                            <connections>
+                                                <action selector="cancel:" destination="ObL-Uk-yyO" id="o3Q-s7-AgR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9Px-c1-KkH">
+                                            <connections>
+                                                <action selector="save:" destination="ObL-Uk-yyO" id="Wt8-MX-pbM"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ISBN" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cr3-4Q-73a">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Io0-Hx-hjq">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kategorie" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kCu-hZ-8LP">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Io0-Hx-hjq" firstAttribute="top" secondItem="Sib-of-vY2" secondAttribute="top" constant="119" id="3bD-0d-FKo"/>
+                            <constraint firstItem="Io0-Hx-hjq" firstAttribute="leading" secondItem="Sib-of-vY2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="BiE-jW-dPm"/>
+                            <constraint firstItem="t7d-np-vVn" firstAttribute="top" secondItem="Sib-of-vY2" secondAttribute="top" type="default" id="BpL-4T-eBP"/>
+                            <constraint firstItem="t7d-np-vVn" firstAttribute="trailing" secondItem="Sib-of-vY2" secondAttribute="trailing" type="default" id="DsX-FP-QT0"/>
+                            <constraint firstItem="cr3-4Q-73a" firstAttribute="leading" secondItem="Sib-of-vY2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FL1-4K-R1Z"/>
+                            <constraint firstItem="kCu-hZ-8LP" firstAttribute="top" secondItem="Sib-of-vY2" secondAttribute="top" constant="166" id="Gh1-uM-jFK"/>
+                            <constraint firstItem="kCu-hZ-8LP" firstAttribute="leading" secondItem="Sib-of-vY2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="S1M-Ih-Mdv"/>
+                            <constraint firstAttribute="trailing" secondItem="kCu-hZ-8LP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Trz-f1-7xP"/>
+                            <constraint firstItem="t7d-np-vVn" firstAttribute="leading" secondItem="Sib-of-vY2" secondAttribute="leading" type="default" id="XlW-NH-gLU"/>
+                            <constraint firstItem="cr3-4Q-73a" firstAttribute="top" secondItem="Sib-of-vY2" secondAttribute="top" constant="68" id="ZbF-kC-l3C"/>
+                            <constraint firstAttribute="trailing" secondItem="Io0-Hx-hjq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mga-05-hii"/>
+                            <constraint firstAttribute="trailing" secondItem="cr3-4Q-73a" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="snn-NG-5Uw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="categoryTextField" destination="kCu-hZ-8LP" id="JLz-h3-OGk"/>
+                        <outlet property="isbnTextField" destination="cr3-4Q-73a" id="dYj-1i-eol"/>
+                        <outlet property="nameTextField" destination="Io0-Hx-hjq" id="ski-7M-14a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cr1-8T-ZtK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1918" y="-355"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LMV-D2-oRN">
+            <objects>
+                <navigationController id="OwG-Dz-nm2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzP-fA-S2u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EOP-GQ-tJc" kind="relationship" relationship="rootViewController" id="ZjB-4P-jvO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRS-Su-3Yf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="56"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ProductAddViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProductAddViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="categoryTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="durableTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="isbnTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ProductViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProductViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

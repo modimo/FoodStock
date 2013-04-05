@@ -18,6 +18,9 @@
 		84D8B88D170F1E2000BEC419 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D8B88C170F1E2000BEC419 /* Default@2x.png */; };
 		84D8B88F170F1E2000BEC419 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84D8B88E170F1E2000BEC419 /* Default-568h@2x.png */; };
 		84D8B892170F1E2000BEC419 /* FoodStock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84D8B890170F1E2000BEC419 /* FoodStock.xcdatamodeld */; };
+		84D8B899170F1E3E00BEC419 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D8B898170F1E3E00BEC419 /* Storyboard.storyboard */; };
+		84D8B89C170F1FB300BEC419 /* ProductAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8B89B170F1FB300BEC419 /* ProductAddViewController.m */; };
+		84D8B89F170F1FC800BEC419 /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D8B89E170F1FC700BEC419 /* ProductViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,11 @@
 		84D8B88C170F1E2000BEC419 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		84D8B88E170F1E2000BEC419 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		84D8B891170F1E2000BEC419 /* FoodStock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodStock.xcdatamodel; sourceTree = "<group>"; };
+		84D8B898170F1E3E00BEC419 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		84D8B89A170F1FB300BEC419 /* ProductAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductAddViewController.h; sourceTree = "<group>"; };
+		84D8B89B170F1FB300BEC419 /* ProductAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductAddViewController.m; sourceTree = "<group>"; };
+		84D8B89D170F1FC700BEC419 /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
+		84D8B89E170F1FC700BEC419 /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,11 @@
 				84D8B888170F1E2000BEC419 /* AppDelegate.m */,
 				84D8B890170F1E2000BEC419 /* FoodStock.xcdatamodeld */,
 				84D8B87F170F1E2000BEC419 /* Supporting Files */,
+				84D8B898170F1E3E00BEC419 /* Storyboard.storyboard */,
+				84D8B89A170F1FB300BEC419 /* ProductAddViewController.h */,
+				84D8B89B170F1FB300BEC419 /* ProductAddViewController.m */,
+				84D8B89D170F1FC700BEC419 /* ProductViewController.h */,
+				84D8B89E170F1FC700BEC419 /* ProductViewController.m */,
 			);
 			path = FoodStock;
 			sourceTree = "<group>";
@@ -161,6 +174,7 @@
 				84D8B88B170F1E2000BEC419 /* Default.png in Resources */,
 				84D8B88D170F1E2000BEC419 /* Default@2x.png in Resources */,
 				84D8B88F170F1E2000BEC419 /* Default-568h@2x.png in Resources */,
+				84D8B899170F1E3E00BEC419 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +188,8 @@
 				84D8B885170F1E2000BEC419 /* main.m in Sources */,
 				84D8B889170F1E2000BEC419 /* AppDelegate.m in Sources */,
 				84D8B892170F1E2000BEC419 /* FoodStock.xcdatamodeld in Sources */,
+				84D8B89C170F1FB300BEC419 /* ProductAddViewController.m in Sources */,
+				84D8B89F170F1FC800BEC419 /* ProductViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
