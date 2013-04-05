@@ -14,9 +14,11 @@
 
 @implementation ProductAddViewController
 
+@synthesize product;
 @synthesize isbnTextField;
 @synthesize nameTextField;
 @synthesize categoryTextField;
+@synthesize productImageView;
 
 - (NSManagedObjectContext *)managedObjectContext
 {
@@ -42,6 +44,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    if (self.product)
+    {
+        [self.isbnTextField setText:[self.product valueForKey:@"isbn"]];
+        [self.nameTextField setText:[self.product valueForKey:@"name"]];
+        [self.categoryTextField setText:[self.product valueForKey:@"category"]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,14 +62,25 @@
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    // Create a new managed object
-    NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:context];
-    [newDevice setValue:self.isbnTextField.text forKey:@"isbn"];
-    [newDevice setValue:self.nameTextField.text forKey:@"name"];
-    [newDevice setValue:self.categoryTextField.text forKey:@"category"];
-    [newDevice setValue:@"init" forKey:@"price"];
-    [newDevice setValue:@"init" forKey:@"durable"];
-    
+    if (self.product)
+    {
+        // Update existing device
+        // Update existing device
+        [self.product setValue:self.isbnTextField.text forKey:@"isbn"];
+        [self.product setValue:self.nameTextField.text forKey:@"name"];
+        [self.product setValue:self.categoryTextField.text forKey:@"category"];
+        
+    }
+    else
+    {
+        // Create a new managed object
+        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:context];
+        [newDevice setValue:self.isbnTextField.text forKey:@"isbn"];
+        [newDevice setValue:self.nameTextField.text forKey:@"name"];
+        [newDevice setValue:self.categoryTextField.text forKey:@"category"];
+        [newDevice setValue:@"init" forKey:@"price"];
+        [newDevice setValue:@"init" forKey:@"durable"];
+    }
     
     NSError *error = nil;
     // Save the object to persistent store
@@ -76,4 +95,33 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)tappedUseCamera:(id)sender
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        picker.delegate = self;
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self.productImageView setImage:image];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)textFieldReturn:(id)sender
+{
+    [sender resignFirstResponder];
+}
+
+- (IBAction)showCategoryPickerView:(id)sender
+{
+    categoryTextField.hidden = NO;
+}
+
+
 @end

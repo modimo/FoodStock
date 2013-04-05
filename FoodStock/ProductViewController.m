@@ -7,6 +7,7 @@
 //
 
 #import "ProductViewController.h"
+#import "ProductAddViewController.h"
 
 @interface ProductViewController ()
 
@@ -15,6 +16,7 @@
 @implementation ProductViewController
 
 @synthesize products;
+
 
 - (NSManagedObjectContext *)managedObjectContext
 {
@@ -72,8 +74,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return self.products.count;
+    return [products count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,12 +82,52 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    // Configure the cell..
     NSManagedObject *product = [self.products objectAtIndex:indexPath.row];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", [product valueForKey:@"name"]]];
     
     return cell;
 }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        // Delete object from database
+        [context deleteObject:[self.products objectAtIndex:indexPath.row]];
+        
+        NSError *error = nil;
+        if (![context save:&error])
+        {
+            NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+            return;
+        }
+        
+        // Remove device from table view
+        [self.products removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"UpdateProduct"])
+    {
+        NSManagedObject *selectedProduct = [self.products objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        ProductAddViewController *destViewController = segue.destinationViewController;
+        destViewController.product = selectedProduct;
+    }
+}
+
 
 
 @end
